@@ -7,7 +7,6 @@
     "start": "node app.js",
     "test": "echo \"Error no test specified\" && exit 1",
     "run": "nodemon app.js",
-     "build": "[Other] build --output public"
   },
   "author": "Pietro",
   "license": "ISC",
