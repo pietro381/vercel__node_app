@@ -8,7 +8,7 @@ app.listen(port)
 
 console.log("Running")
 
-app.get("/", (req,res)=>{
+app.get("/vercel-node-app2.vercel.app", (req,res)=>{
 	
 		res.send("Hello Pietro")
 	
