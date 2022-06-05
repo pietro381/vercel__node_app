@@ -6,8 +6,9 @@ app.listen(port)
 
 console.log("Running")
 
-app.get("/vercel-node-app2.vercel.app", (req,res)=>{
+app.get("/api/vercel-node-app2.vercel.app", (req,res)=>{
 	
 		res.send("Hello Pietro")
 	
 	})
+
