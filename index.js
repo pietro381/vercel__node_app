@@ -7,7 +7,7 @@ app.listen(port)
 
 console.log("Running")
 
-app.get("/api/test", (req,res)=>{
+app.get("/", (req,res)=>{
 	
 		res.send("Hello Pietro")
 	
