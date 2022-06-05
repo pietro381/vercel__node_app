@@ -1,21 +1,15 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3002
 
 
 
+app.listen(port)
 
-app.listen(port, (error)=>{
+console.log("Running")
+
+app.get("/", (req,res)=>{
 	
-		if (!error) {
-				res.send("Working")
-			}
-	
-	
-		else {
-				res.send("Working")
-			}
+		res.send("Hello Pietro")
 	
 	})
-
-
