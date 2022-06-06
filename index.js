@@ -1,15 +1,36 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3002
+const myrouter=require('./src/route/router.js')
+const port = process.env.PORT || 3001
+const cors = require('cors')
 
 
-app.listen(port)
+require('dotenv').config
+require('./connDb.js')
 
-console.log("Running")
 
-app.get("/", (req,res)=>{
+
+//app.use(cors);
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+
+
+app.listen(port, (error)=>{
 	
-		res.send("Hello Pietro. Finally I got it working.....Cant believe it")
+		if (!error) {
+				console.log("App is running")
+			}
+	
+	
+		else {
+				console.log("App is not running")
+			}
 	
 	})
 
+
+app.use("/",myrouter)
